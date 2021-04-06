@@ -1,0 +1,62 @@
+.content.pk-detail
+    background-color: $grey
+    padding: rem(40) rem(20)
+    width: rem(500)
+    margin-left: auto
+    margin-right: auto
+    height: auto
+    text-align: center
+    .info
+        background-color: $grey-50
+        padding: rem(20) 0
+    h1,
+    h2,
+    h4
+        text-transform: uppercase
+        color: $grey-40
+
+    .measure,
+    .abilities,
+    .types
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-evenly
+
+    .abilities
+        list-style: none
+
+    .types
+        div
+            min-width: rem(130)
+            padding: rem(10) rem(50)
+
+    .pokemon-evo.content
+        padding: rem (10) 0
+
+        .list
+            display: flex
+            list-style: none
+            padding: 0
+            .evo
+                text-transform: uppercase
+                background-color: $grey-70
+                padding: rem(20) rem(10)
+                margin: rem(5)
+                
+                img
+                    border: solid rem(1) $batterfield
+                    border-radius: 50%
+                    margin-bottom: rem(10)
+                
+                a
+                    font-weight: bold
+                    color: $secondary-color
+                    margin-top: rem(10)
+                    transition: all ease 2s
+
+                &:hover,
+                &:focus
+                    transform: scale(1.2)
+                    transition: all ease 2s
+
+

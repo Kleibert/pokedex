@@ -1,0 +1,45 @@
+/// Min width
+/// @param {length} $width - Width
+/// @content
+/// @example scss - Only if screen is 768 or larger
+///   @include min-width(rem(768)) {
+///     ...
+///   }
+=min-width($width)
+  @media only screen and (min-width: $width)
+    @content
+
+/// Max width
+/// @param {length} $width - Width
+/// @content
+/// @example scss - Only if screen is 767 or smaller
+///   @include max-width(rem(767)) {
+///     ...
+///   }
+=max-width($width)
+  @media only screen and (max-width: $width)
+    @content
+
+/// Desktop only
+/// @content
+/// @requires $font-size-default
+/// @requires $mobile-threshold
+/// @example scss
+///   @include desktop-only {
+///     ...
+///   }
+=desktop-only
+  @media only screen and (min-width: #{$mobile-threshold / $font-size-default}rem)
+    @content
+
+/// Mobile only
+/// @content
+/// @requires $font-size-default
+/// @requires $mobile-threshold
+/// @example scss
+///   @include mobile-only {
+///     ...
+///   }
+=mobile-only
+  @media only screen and (max-width: #{($mobile-threshold - 1) / $font-size-default}rem)
+    @content

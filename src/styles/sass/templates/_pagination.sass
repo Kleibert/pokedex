@@ -1,0 +1,22 @@
+.pagination
+    display: flex
+    list-style: none
+    padding: 0
+    max-width: rem(500)
+    flex-wrap: wrap
+    .page-item
+        
+        button
+            padding: rem(10)
+            margin: rem(5)
+            background-color: inherit
+            color: $white
+            text-decoration: none
+            border-color: $white
+            border-style: solid 
+            border-width: 1px
+        &:hover,
+        &:focus
+                transform: scale(1.2)
+    +mobile-only
+        max-width: 100%

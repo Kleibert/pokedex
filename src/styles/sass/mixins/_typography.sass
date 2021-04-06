@@ -1,0 +1,16 @@
+/// Strip units
+/// @param {length} $value - Value (with unit)
+/// @return {number}
+/// @example scss
+///   strip-unit(25px)
+///   // 25
+@function strip-unit($value)
+  @return $value / ($value * 0 + 1)
+
+/// @require $font-size-default
+/// @require strip-unit
+/// @example scss
+///   rem(25px)
+///   // 1.5625em
+@function rem($px)
+  @return #{strip-unit($px / $font-size-default)}rem
